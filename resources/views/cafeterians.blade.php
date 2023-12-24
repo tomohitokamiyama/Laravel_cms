@@ -17,7 +17,7 @@
         　
             
         <!-- カフェ登録フォーム -->
-        <form action="{{ url('cafes') }}" method="POST" class="form-horizontal">
+        <form enctype="multipart/form-data" action="{{ url('cafes') }}" method="POST" class="form-horizontal">
             @csrf
 
             <!-- カフェのタイトル -->
@@ -56,9 +56,13 @@
             </div>
             
             
-           
-　　　　　
+           <!-- file追加 -->
+　　　　　<div class="col-sm-6">
+　　　　　    <lavel>画像</lavel>
+　　　　　    <input type="file" name="item_img">
+　　　　　</div>
             
+　　　　　
             <!-- カフェ 登録ボタン -->
             <div class="form-group">
                 @csrf
@@ -95,6 +99,7 @@
                                 <!-- カフェタイトル -->
                                 <td >
                                     <div>{{ $cafeterian->item_name }}</div>
+                                    <div><img src="upload/{{$cafeterian->item_img}}" width="300"></div>
                                 </td>
                                 
                                 <!-- 金額 -->

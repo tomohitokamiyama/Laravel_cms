@@ -18,8 +18,8 @@ class CreateCafeteriansTable extends Migration
             $table->string('item_name');
              $table->text('item_text');
              $table->integer('item_amount');
-            $table->integer('item_number
-            ');
+            $table->integer('item_number');
+            $table->string('item_img');
              $table->datetime('published');
             $table->timestamps();
         });
