@@ -1,3 +1,8 @@
 .container{
     display: flex;
 }
+
+body {
+    background-color: #FFDAB3;
+    
+}
