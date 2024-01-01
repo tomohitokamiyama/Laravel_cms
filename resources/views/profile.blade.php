@@ -3,10 +3,24 @@
 <head>
     <meta charset="utf-8">
     
+    <!-- CSS -->
     <link href="{{ asset('css/front.css') }}"rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/front.js') }}" defer></script>
+
    <title>カフェ</title>
 </head>
 <body>
+    
+    <!-- ローディング画面 -->
+    <div id="loading">
+        <p>Loading...</p>
+        <div id="loading-screen"></div>
+         <div id="loading-screen2"></div>
+    </div>
+    
+    
     <div id="home" class="big-gazou">
     <nav>
         <ul class="first-nav">
@@ -25,5 +39,17 @@
      <iframe width="250" height="150" src="https://www.youtube.com/embed/xXPUnmhth7s?si=clXmTgDCY1HhKfYm" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    
+    
+    <section class="contact">
+    <div class="contact-content wrapper">
+        <h2 class="title">お問い合わせ</h2>
+        <p>ご不明点があればお問い合わせください</p>
+        <a class="btn" href="{{ url('/contact') }}">お問い合わせフォーム</a>
+        
+        
+    </div>
+</section>
+    
 </body>
 </html>

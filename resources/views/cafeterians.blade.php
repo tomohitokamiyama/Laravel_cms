@@ -40,14 +40,33 @@
             <!-- 予算 -->
             <div class="form-group">
                     <label for="yosan" class="col-sm-3 control-label">予算</label>
-                    <input type="text" name="item_number" class="form-control">
+                    <select name="item_number" class="form-control">
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                        <option value="3000">3000</option>
+                        <option value="4000">4000</option>
+                    </select>
             </div>
             
-            
-            <div class="form-group ">
-                    <label for="number" class="col-sm-3 control-label">人数キャパ</label>
+            <!-- 滞在時間 -->
+             <div class="form-group ">
+                    <label for="number" class="col-sm-3 control-label">滞在できる時間</label>
                     <input type="text" name="item_amount" class="form-control">
+            <div class="form-group ">
+                
+                <!-- 人数 -->
+            <div>
+                    <label for="human" class="col-sm-3 control-label">人数キャパ</label>
+                    <select name="item_human" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
             </div>
+
+            
+           
                 
              <!-- 公開日 -->
             <div class="form-group">
@@ -74,6 +93,12 @@
             </div>
             @csrf
             
+            <!-- 星評価 -->
+                                 
+                                 <div id="star">
+　                                  <star-rating v-model="rating"></star-rating>
+                                 </div>
+                                
             
                                     
                             
@@ -107,11 +132,7 @@
                                     <div>{{ $cafeterian->item_number }}</div>
                                 </td>
                                 
-                                 <!-- 星評価 -->
-                                 <div id="star">
-　                                  <star-rating v-model="rating"></star-rating>
-                                 </div>
-                                
+                                 
                                 
                             
                                 <!-- コメント -->
@@ -119,9 +140,14 @@
                                     <div>{{ $cafeterian->item_text }}</div>
                                 </td>
                                 
-                                 <!-- 人数 -->
+                                 <!-- 滞在時間 -->
                                 <td >
-                                    <div>{{ $cafeterian->amount }}</div>
+                                    <div>{{ $cafeterian->item_amount }}</div>
+                                </td>
+                                
+                                <!-- 人数 -->
+                                <td >
+                                    <div>{{ $cafeterian->item_human }}</div>
                                 </td>
                                 
                                 <!-- 日付 -->

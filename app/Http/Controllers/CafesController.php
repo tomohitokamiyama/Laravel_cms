@@ -49,9 +49,13 @@ class CafesController extends Controller{
     $cafeterians->item_name = $request->item_name;
     $cafeterians->item_text = $request->item_text;
     $cafeterians->item_number = $request->item_number;
+    $cafeterians->item_amount = $request->item_amount;
+    //$cafeterians->item_human = $request->item_human;
+    
     $cafeterians->item_img = $filename;
     $cafeterians->published = $request->published;
-    $cafeterians->item_amount = $request->item_amount;
+    $cafeterians->timestamps = false;
+    
     $cafeterians->save(); 
     return redirect('/');
     }

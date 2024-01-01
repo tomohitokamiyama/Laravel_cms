@@ -16,6 +16,17 @@ Route::get('/profile', function () {
 
 
 /**
+ * お問い合わせページ
+ */
+Route::get('/contact', function () {
+    
+      return view('contact');
+
+    
+});
+
+
+/**
  * カフェ店舗一覧表示
  */
 Route::get('/', 'CafesController@index');

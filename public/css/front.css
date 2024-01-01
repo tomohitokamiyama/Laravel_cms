@@ -34,3 +34,45 @@ html{
     background-image: url(/image/p7925.jpg);
     min-height: 100vh;
 }
+
+
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
+#loading {
+    background-color: var(--light-grey);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+
+#loading-screen {
+    background-color: var(--light-green);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    translate: 0 100vh;
+}
+
+#loading-screen2 {
+    background-color: var(--light-red);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    translate: 100vh 0;
+}
+
+
+#loading p {
+    font-size: 2rem;
+    font-family: var(--oswald-font);
+}
+
