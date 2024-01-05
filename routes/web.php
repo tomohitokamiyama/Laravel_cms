@@ -37,7 +37,15 @@ Route::get('/', 'CafesController@index');
 //登録処理
 Route::post('/cafes','CafesController@store');
 
+//更新画面
+Route::post('/cafesedit/{cafeterians}', function(Cafeterian $cafeterians) {
+    //{books}id 値を取得 => Book $books id 値の1レコード取得
+    return view('cafesedit', ['cafeterians' => $cafeterians]);
+});
 
+
+//更新処理
+Route::post('/cafes/update', 'CafesController@update');
 
 /**
  * カフェ店舗名を削除

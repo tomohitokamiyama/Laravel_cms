@@ -18,14 +18,27 @@ class CafesController extends Controller{
         ]);
     }
     
-    //更新（予定）
+    
+    //登録
     public function update(Request $request){
+        
+        $file = $request->file('item_img'); //file取得
+         if( !empty($file) ){                //fileが空かチェック
+            $filename = $file->getClientOriginalName();   //ファイル名を取得
+             $move = $file->move('./upload/',$filename);  //ファイルを移動：パスが“./upload/”の場合もあるCloud9
+         }else{
+             $filename = "";
+         }
+    
+    //更新（予定）
+    //public function update(Request $request){
      
        // Eloquentモデル（登録処理）
     $cafeterians = new Cafeterian;
     $cafeterians->item_name = $request->item_name;
     $cafeterians->item_text = $request->item_text;
     $cafeterians->item_number = $request->item_number;
+    $cafeterians->item_img =    $filename;
     $cafeterians->published = $request->published;
     $cafeterians->item_amount = $request->item_amount;
     $cafeterians->save(); 

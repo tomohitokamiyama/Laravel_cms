@@ -34,7 +34,7 @@
             
             <div class="form-group">
                     <label for="coment" class="col-sm-3 control-label">コメント欄</label>
-                    <input type="text" name="item_text" class="form-control">
+                    <input type="text" id="coment"  name="item_text" class="form-control">
             </div>
             
             <!-- 予算 -->
@@ -121,7 +121,7 @@
                         @foreach ($cafeterians as $cafeterian)
                         <div class="container">
                             <tr>
-                                <!-- カフェタイトル -->
+                                <!-- カフェ名前と画像 -->
                                 <td >
                                     <div>{{ $cafeterian->item_name }}</div>
                                     <div><img src="upload/{{$cafeterian->item_img}}" width="300"></div>
@@ -156,6 +156,16 @@
                                 </td>
                                 
                                
+                            
+                            <!-- カフェ: 更新ボタン -->
+                                <td>
+                                    <form action="{{ url('cafesedit/'.$cafeterian->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">
+                                            更新
+                                        </button>
+                                    </form>
+                                </td>
                             
                             
                               <!-- カフェ: 削除ボタン -->
