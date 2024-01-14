@@ -25,7 +25,7 @@ class CafesController extends Controller{
         $file = $request->file('item_img'); //file取得
          if( !empty($file) ){                //fileが空かチェック
             $filename = $file->getClientOriginalName();   //ファイル名を取得
-             $move = $file->move('./upload/',$filename);  //ファイルを移動：パスが“./upload/”の場合もあるCloud9
+             $move = $file->move('./upload/',$filename);  //ファイルを移動
          }else{
              $filename = "";
          }
