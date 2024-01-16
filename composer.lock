@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5 || ^8.0"
+                "php": "^7.2.34 || ^8.0"
             },
             "conflict": {
                 "doctrine/dbal": ">=3.7.0"
@@ -6151,7 +6151,7 @@
                 "ext-dom": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
-                "php": "^7.2 || ^8.0"
+                "php": "^7.2.34 || ^8.0"
             },
             "type": "library",
             "autoload": {
