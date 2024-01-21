@@ -41,10 +41,10 @@
             <div class="form-group">
                     <label for="yosan" class="col-sm-3 control-label">予算</label>
                     <select name="item_number" class="form-control">
-                        <option value="1000">1000</option>
-                        <option value="2000">2000</option>
-                        <option value="3000">3000</option>
-                        <option value="4000">4000</option>
+                        <option value="500円～1000円">500円～1000円</option>
+                        <option value="1000円～2000円">1000円～2000円</option>
+                        <option value="2000円～3000円">2000円～3000円</option>
+                        <option value="3000円以上">3000円以上</option>
                     </select>
             </div>
             
@@ -58,10 +58,10 @@
             <div>
                     <label for="human" class="col-sm-3 control-label">人数キャパ</label>
                     <select name="item_human" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                        <option value="1~2人">1~2人</option>
+                        <option value="2~3人">2~3人</option>
+                        <option value="3~4人">3~4人</option>
+                        <option value="団体">団体</option>
                     </select>
             </div>
 

@@ -17,10 +17,10 @@ class CreateCafeteriansTable extends Migration
             $table->bigIncrements('id');
             $table->string('item_name');
              $table->text('item_text');
-              $table->integer('item_number');
-             $table->VARCHAR('item_human');
+              $table->string('item_number');//予算
+             $table->string('item_human');//人数キャパ
            
-             $table->int('item_amount');
+             $table->integer('item_amount');
             $table->string('item_img');
              $table->datetime('published');
             
