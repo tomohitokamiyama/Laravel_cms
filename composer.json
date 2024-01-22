@@ -15,6 +15,7 @@
         "monolog/monolog": "^2.9"
     },
     "require-dev": {
+        "heroku/heroku-buildpack-php": "*",
         "facade/ignition": "^1.16.15",
         "fakerphp/faker": "^1.9.1",
         "laravel/ui": "^1.3",
