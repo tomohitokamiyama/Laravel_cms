@@ -15,12 +15,13 @@
         "laravel/ui": "^4.4",
         "monolog/monolog": "^2.9",
         "nunomaduro/collision": "^6.1",
+        "fakerphp/faker": "^1.9.1",
         "spatie/laravel-ignition": "^1.0"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*",
        
-        "fakerphp/faker": "^1.9.1",
+        
         "mockery/mockery": "^1.0",
         
         "phpunit/phpunit": "^8.5.8|^9.3.3"
