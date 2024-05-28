@@ -39,7 +39,7 @@
             
             <!-- 予算 -->
             <div class="form-group">
-                    <label for="yosan" class="col-sm-3 control-label">予算</label>
+                    <label for="yosan" class="col-sm-3 control-label">価格帯</label>
                     <select name="item_number" class="form-control">
                         <option value="500円～1000円">500円～1000円</option>
                         <option value="1000円～2000円">1000円～2000円</option>
@@ -56,7 +56,7 @@
                 
                 <!-- 人数 -->
             <div>
-                    <label for="human" class="col-sm-3 control-label">人数キャパ</label>
+                    <label for="human" class="col-sm-3 control-label">来客人数</label>
                     <select name="item_human" class="form-control">
                         <option value="1~2人">1~2人</option>
                         <option value="2~3人">2~3人</option>
