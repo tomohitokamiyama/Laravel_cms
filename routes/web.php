@@ -1,60 +1,37 @@
 <?php
 
-use App\Cafeterian;
-use Illuminate\Http\Request;
+use App\Http\Controllers\CafesController;
+use Illuminate\Support\Facades\Route;
 
+// カフェ一覧表示
+Route::get('/', [CafesController::class, 'index']);
 
-/**
- * 自己紹介ページ
- */
-Route::get('/profile', function () {
-    
-      return view('profile');
+// カフェ登録処理
+Route::post('/cafes', [CafesController::class, 'store']);
 
-    
-});
-
-
-/**
- * お問い合わせページ
- */
-Route::get('/contact', function () {
-    
-      return view('contact');
-
-    
-});
-
-
-/**
- * カフェ店舗一覧表示
- */
-Route::get('/', 'CafesController@index');
-
-
-
-
-//登録処理
-Route::post('/cafes','CafesController@store');
-
-//更新画面
+// カフェ更新画面
 Route::post('/cafesedit/{cafeterians}', function(Cafeterian $cafeterians) {
-    //{books}id 値を取得 => Book $books id 値の1レコード取得
     return view('cafesedit', ['cafeterians' => $cafeterians]);
 });
 
+// カフェ更新処理
+Route::post('/cafes/update', [CafesController::class, 'update']);
 
-//更新処理
-Route::post('/cafes/update', 'CafesController@update');
+// カフェ店舗名を削除
+Route::delete('/cafes/{cafeterian}', [CafesController::class, 'destroy']);
 
-/**
- * カフェ店舗名を削除
- */
-Route::delete('/cafes/{cafeterian}', 'CafesController@destro');
+// 自己紹介ページ
+Route::get('/profile', function () {
+    return view('profile');
+});
 
+// お問い合わせページ
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

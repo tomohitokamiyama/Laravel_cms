@@ -25,6 +25,7 @@ class CreateCafeteriansTable extends Migration
              $table->datetime('published');
             
             $table->timestamps();
+            $table->dropColumn('item_img');
         });
     }
 
